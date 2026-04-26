@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Hub Gulu | Film, Media & Online Training</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="logo.png" alt="Creative Hub Logo" id="logo">
+        <h1><span>Creative Hub</span> Gulu</h1>
+      </div>
+      <nav>
+        <div class="dropdown">
+          <a href="#programs" class="drop-btn">Programs <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#courses">10-Month Film Training</a>
+            <a href="#online">Online Classes</a>
+            <a href="#membership">Membership</a>
+            <a href="#workshops">Weekend Workshops</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#learn" class="drop-btn">Learn <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#online">Class Portal</a>
+            <a href="#notes">Download Notes</a>
+            <a href="#films">Watch Films</a>
+            <a href="#blog">Blog & News</a>
+          </div>
+        </div>
+        <a href="#gallery">Gallery</a>
+        <a href="#partners" join us="drop-btn">Partners <i class="fa-angle-down"</<i></i>
+        <a href="#donate" class="donate-btn">Donate</a>
+        <button id="loginBtn" class="login-btn"><i class="fa-solid fa-user"></i> Login</button>
+        <button id="signupBtn" class="signup-btn"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+      </nav>
+    </div>
+    <div class="hero">
+      <h2>Creative Hub Gulu</h2>
+      <p>Training Northern Uganda in Film, Media & Digital Skills — Onsite & Online</p>
+      <div class="hero-btns">
+        <a href="#courses" class="cta-btn">Join 10-Month Program</a>
+        <a href="#online" class="cta-btn-outline">Start Online Class</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="programs" class="info-section">
+      <h2>Our Programs</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fa-solid fa-film"></i>
+          <h3>10-Month Film Training</h3>
+          <p>Our flagship program. Script Writing, Directing, Cinematography, Editing, Sound. UGX 200,000= total.</p>
+          <a href="#courses" class="card-link">View Modules →</a>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-laptop"></i>
+          <h3>Online Classes</h3>
+          <p>Learn from anywhere. Weekly live sessions, notes, assignments. Chat with teachers directly.</p>
+          <a href="#online" class="card-link">Enter Portal →</a>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-id-badge"></i>
+          <h3>Membership</h3>
+          <p>Access equipment, get paid gigs, join masterclasses. For graduates & practicing creators.</p>
+          <a href="#membership" class="card-link">Join Hub →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <h2>10-Month Film Training Program</h2>
+      <p class="program-note">One comprehensive program. All modules included. Total Fee: <strong>UGX 200,000=</strong></p>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Modules</button>
+        <button class="filter-btn" data-filter="Pre-Production">Pre-Production</button>
+        <button class="filter-btn" data-filter="Production">Production</button>
+        <button class="filter-btn" data-filter="Post-Production">Post-Production</button>
+      </div>
+      <div id="coursesGrid" class="gallery"></div>
+      <div class="center">
+        <a href="application-form.pdf" class="cta-btn-outline" download><i class="fa-solid fa-download"></i> Download Application Form</a>
+      </div>
+    </section>
+
+    <section id="online" class="info-section dark">
+      <h2><i class="fa-solid fa-globe"></i> Online Class Portal</h2>
+      <p class="center">For registered students only. Login to access.</p>
+      
+      <div class="online-grid">
+        <div class="online-card">
+          <i class="fa-solid fa-book"></i>
+          <h3>Class Notes</h3>
+          <p>Download PDFs, slides, and scripts from each session.</p>
+          <a href="#notes" class="card-link">Access Notes →</a>
+        </div>
+        <div class="online-card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Chat with Teachers</h3>
+          <p>Ask questions, submit assignments, get feedback.</p>
+          <button id="openChat" class="card-link">Open Class Chat →</button>
+        </div>
+        <div class="online-card">
+          <i class="fa-solid fa-video"></i>
+          <h3>Live Sessions</h3>
+          <p>Join weekly Zoom classes. Next: Saturday 2PM</p>
+          <a href="https://zoom.us/j/YOURMEETINGID" target="_blank" class="card-link">Join Live →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="info-section">
+      <h2><i class="fa-solid fa-file-pdf"></i> Student Resources</h2>
+      <p class="center">Login required to download. Public samples below:</p>
+      <div class="download-grid">
+        <div class="download-card">
+          <i class="fa-solid fa-file-pdf"></i>
+          <h3>Script Writing Basics</h3>
+          <p>Module 1 Sample</p>
+          <a href="notes/sample-script-writing.pdf" download class="cta-btn">Download PDF</a>
+        </div>
+        <div class="download-card">
+          <i class="fa-solid fa-file-pdf"></i>
+          <h3>Camera Angles Guide</h3>
+          <p>Cinematography Cheat Sheet</p>
+          <a href="notes/camera-angles.pdf" download class="cta-btn">Download PDF</a>
+        </div>
+        <div class="download-card">
+          <i class="fa-solid fa-file-pdf"></i>
+          <h3>Editing Shortcuts</h3>
+          <p>Premiere Pro Hotkeys</p>
+          <a href="notes/editing-shortcuts.pdf" download class="cta-btn">Download PDF</a>
+        </div>
+      </div>
+      <p class="center small">Teachers: <a href="mailto:creathubug@gmail.com">Email us</a> to upload new notes for students</p>
+    </section>
+
+    <section id="films" class="info-section dark">
+      <h2><i class="fa-brands fa-youtube"></i> Watch Our Films</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 1" frameborder="0" allowfullscreen></iframe>
+          <h3>The Gulu Story</h3>
+          <p>Documentary by Cohort 2024</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 2" frameborder="0" allowfullscreen></iframe>
+          <h3>Voices of Peace</h3>
+          <p>Short film shot on mobile</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 3" frameborder="0" allowfullscreen></iframe>
+          <h3>Behind the Scenes</h3>
+          <p>How we train filmmakers</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="info-section">
+      <h2><i class="fa-solid fa-newspaper"></i> Hub Blog</h2>
+      <div class="blog-post">
+        <h3>May 2026 Intake Now Open</h3>
+        <p class="date">Posted: April 15, 2026 by Admin</p>
+        <p>Applications for our 10-month program are now open. Only 20 spots available. Scholarships for 5 women filmmakers. Apply before April 30th.</p>
+        <div class="post-actions">
+          <button class="like-btn"><i class="fa-solid fa-heart"></i> <span>24</span></button>
+          <button class="comment-btn"><i class="fa-solid fa-comment"></i> Comment</button>
+        </div>
+      </div>
+      <div class="blog-post">
+        <h3>New Online Course: Mobile Filmmaking</h3>
+        <p class="date">Posted: April 10, 2026 by Instructor John</p>
+        <p>Learn to shoot and edit professional videos using only your smartphone. 4-week online course starts May 5th. UGX 50,000=</p>
+        <div class="post-actions">
+          <button class="like-btn"><i class="fa-solid fa-heart"></i> <span>18</span></button>
+          <button class="comment-btn"><i class="fa-solid fa-comment"></i> Comment</button>
+        </div>
+      </div>
+      
+      <h3 class="comments-title">Comments</h3>
+      <div id="disqus_thread"></div>
+    </section>
+
+    <section id="gallery">
+      <h2>Creative Hub in Action</h2>
+      <div class="photo-grid">
+        <img src="student1.jpg" alt="Students filming in Gulu">
+        <img src="student2.jpg" alt="Editing class">
+        <img src="student3.jpg" alt="On location shoot">
+        <img src="student4.jpg" alt="Sound recording">
+        <img src="student5.jpg" alt="Lighting setup">
+        <img src="student6.jpg" alt="Graduation day">
+        <img src="student7.jpg" alt="Online class screenshot">
+        <img src="student8.jpg" alt="Team meeting">
+      </div>
+    </section>
+
+    <section id="membership" class="info-section dark">
+      <h2><i class="fa-solid fa-id-badge"></i> Become a Member</h2>
+      <p>Join the Creative Hub Collective. Members get equipment access, mentorship, and paid project referrals.</p>
+      <ul class="member-perks">
+        <li><i class="fa-solid fa-check"></i> Borrow cameras, mics, lights for personal projects</li>
+        <li><i class="fa-solid fa-check"></i> Monthly masterclasses with industry pros</li>
+        <li><i class="fa-solid fa-check"></i> Access to online class recordings</li>
+        <li><i class="fa-solid fa-check"></i> Listed in our crew database for paid hire</li>
+      </ul>
+      <div class="hero-btns">
+        <a href="https://wa.me/256772123456?text=Hi, I want to become a Creative Hub member" class="cta-btn">Apply on WhatsApp</a>
+        <a href="membership-form.pdf" class="cta-btn-outline" download><i class="fa-solid fa-download"></i> Membership Form</a>
+      </div>
+    </section>
+
+    <section id="partners" class="info-section">
+      <h2>Our Partners</h2>
+      <div class="partners-grid">
+        <img src="partner1.png" alt="Partner Logo 1">
+        <img src="partner2.png" alt="Partner Logo 2">
+        <img src="partner3.png" alt="Partner Logo 3">
+        <img src="partner4.png" alt="Partner Logo 4">
+        <img src="partner5.png" alt="Partner Logo 5">
+        <img src="partner6.png" alt="Partner Logo 6">
+      </div>
+    </section>
+
+    <section id="donate" class="info-section red">
+      <h2><i class="fa-solid fa-heart"></i> Support Creative Hub</h2>
+      <p>Your donation sponsors a student’s 10-month training. 100% goes to equipment, scholarships, and student films.</p>
+      <div class="donate-box">
+        <h3>Mobile Money</h3>
+        <p class="momo-number">MTN: 0773 841 953</p>
+            <p>Names: Agnes Akello</p>
+        <a href="tel:*165*1*0772123456#" class="cta-btn">Donate via MTN MoMo</a>
+        <p class="small">Click on mobile to auto-dial USSD. Or send manually and WhatsApp us the receipt.</p>
+      </div>
+    </section>
+
+    <section id="register" class="register-section">
+      <h2>Apply for 10-Month Program</h2>
+      <p class="center">Total Fee: UGX 200,000= | Next intake: May 2026</p>
+      <form id="registerForm" action="https://formspree.io/f/YOUR_ID" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="WhatsApp Number e.g. 0773841953" required>
+        <input type="number" name="age" placeholder="Age" min="16" max="40" required>
+        <select name="interest" required>
+          <option value="">Main Area of Interest</option>
+          <option value="Script Writing">Script Writing</option>
+          <option value="Film Directing">Film Directing</option>
+          <option value="Cinematography">Cinematography</option>
+          <option value="Film Editing">Film Editing</option>
+          <option value="Sound Recording & Mixing">Sound Recording & Mixing</option>
+        </select>
+        <textarea name="message" placeholder="Why do you want to join the film training?"></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+      <p id="formMessage"></p>
+      <p class="center small">Or <a href="application-form.pdf" download>download PDF form</a> and submit in person</p>
+    </section>
+
+    <section id="contact" class="info-section dark">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Gulu City, Pece-Laroo<br>Opposite National Water</p>
+        </div>
+        <div>
+          <i class="fa-brands fa-whatsapp"></i>
+          <p><a href="https://wa.me/256772123456">0773 841 953</a></p>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <p><a href="mailto:creathubug@gmail.com">creathubug@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Creative Hub Gulu. Training Northern Uganda's filmmakers.</p>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Member Login</h2>
+      <p>Login to access member resources, equipment booking, and exclusive masterclasses.</p>
+      <button id="auth0Login" class="cta-btn">Login / Sign Up with Email</button>
+      <p class="small">Powered by Auth0. We never see your password.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Disqus Comments - Replace 'your-disqus-shortname' with yours
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = 'creativehubgulu-blog';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</body>
+</html>
