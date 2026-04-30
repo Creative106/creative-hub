@@ -3,313 +3,542 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Hub Gulu | Film, Media & Online Training</title>
+  <title>Gulu Creative Hub | Film School & Media Training</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="nav-container">
+  <!-- NAVBAR WITH DROPDOWN -->
+  <header class="navbar">
+    <div class="container">
       <div class="logo">
-        <img src="logo.png" alt="Creative Hub Logo" id="logo">
-        <h1><span>Creative Hub</span> Gulu</h1>
+        <img src="logo.png" alt="Gulu Creative Hub" height="50">
+        <span>Gulu Creative Hub</span>
       </div>
-      <nav>
+      <nav class="nav-links">
+        <a href="#programs">Programs</a>
+        <a href="#about">About Us</a>
+        <a href="#track-record">Track Record</a>
         <div class="dropdown">
-          <a href="#programs" class="drop-btn">Programs <i class="fa-solid fa-angle-down"></i></a>
+          <a href="#portal">Portal <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown">
+          <a href="#portal">Portal <i class="fa-solid fa-chevron-down"></i></a>
           <div class="dropdown-content">
-            <a href="#courses">10-Month Film Training</a>
-            <a href="#online">Online Classes</a>
-            <a href="#membership">Membership</a>
-            <a href="#workshops">Weekend Workshops</a>
+            <a href="student-login.html">Student Login</a>
+            <a href="class-notes.html">Class Notes</a>
+            <a href="resources.html">Resources</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="#learn" class="drop-btn">Learn <i class="fa-solid fa-angle-down"></i></a>
+          <a href="#partners">Partners <i class="fa-solid fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#online">Class Portal</a>
-            <a href="#notes">Download Notes</a>
-            <a href="#films">Watch Films</a>
-            <a href="#blog">Blog & News</a>
+            <a href="#partners">Our Partners</a>
+            <a href="https://wa.me/256773841953?text=I%20want%20to%20partner%20with%20Gulu%20Creative%20Hub" target="_blank">Become a Partner</a>
           </div>
         </div>
-        <a href="#gallery">Gallery</a>
-        <a href="#partners" join us="drop-btn">Partners <i class="fa-angle-down"</<i></i>
-        <a href="#donate" class="donate-btn">Donate</a>
-        <button id="loginBtn" class="login-btn"><i class="fa-solid fa-user"></i> Login</button>
-        <button id="signupBtn" class="signup-btn"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+        <a href="#blog">Blog & News</a>
+        <button class="btn-small" id="sisiBtn">Sisi Film Lab 2026</button>
+        <button class="btn-small" id="lessonBtn">Online Lesson</button>
+        <div class="dropdown">
+          <a href="#donate" class="btn-donate">Donate <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#donate">MTN MoMo: 0773 841 953</a>
+            <a href="https://wa.me/256773841953?text=I%20want%20to%20donate%20to%20Gulu%20Creative%20Hub" target="_blank">Donate via WhatsApp</a>
+          </div>
+        </div>
       </nav>
-    </div>
-    <div class="hero">
-      <h2>Creative Hub Gulu</h2>
-      <p>Training Northern Uganda in Film, Media & Digital Skills — Onsite & Online</p>
-      <div class="hero-btns">
-        <a href="#courses" class="cta-btn">Join 10-Month Program</a>
-        <a href="#online" class="cta-btn-outline">Start Online Class</a>
-      </div>
     </div>
   </header>
 
-  <main>
-    <section id="programs" class="info-section">
-      <h2>Our Programs</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <i class="fa-solid fa-film"></i>
-          <h3>10-Month Film Training</h3>
-          <p>Our flagship program. Script Writing, Directing, Cinematography, Editing, Sound. UGX 200,000= total.</p>
-          <a href="#courses" class="card-link">View Modules →</a>
-        </div>
-        <div class="about-card">
-          <i class="fa-solid fa-laptop"></i>
-          <h3>Online Classes</h3>
-          <p>Learn from anywhere. Weekly live sessions, notes, assignments. Chat with teachers directly.</p>
-          <a href="#online" class="card-link">Enter Portal →</a>
-        </div>
-        <div class="about-card">
-          <i class="fa-solid fa-id-badge"></i>
-          <h3>Membership</h3>
-          <p>Access equipment, get paid gigs, join masterclasses. For graduates & practicing creators.</p>
-          <a href="#membership" class="card-link">Join Hub →</a>
-        </div>
-      </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Make Films That <span class="accent-text">Matter.</span></h1>
+      <p>10-month program. UGX 200,000. Your story starts here.</p>
+      <button class="btn" id="applyBtn">Apply Now</button>
+    </div>
+  </section>
 
-    <section id="courses">
-      <h2>10-Month Film Training Program</h2>
-      <p class="program-note">One comprehensive program. All modules included. Total Fee: <strong>UGX 200,000=</strong></p>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Modules</button>
-        <button class="filter-btn" data-filter="Pre-Production">Pre-Production</button>
-        <button class="filter-btn" data-filter="Production">Production</button>
-        <button class="filter-btn" data-filter="Post-Production">Post-Production</button>
-      </div>
-      <div id="coursesGrid" class="gallery"></div>
-      <div class="center">
-        <a href="application-form.pdf" class="cta-btn-outline" download><i class="fa-solid fa-download"></i> Download Application Form</a>
-      </div>
-    </section>
-
-    <section id="online" class="info-section dark">
-      <h2><i class="fa-solid fa-globe"></i> Online Class Portal</h2>
-      <p class="center">For registered students only. Login to access.</p>
-      
-      <div class="online-grid">
-        <div class="online-card">
-          <i class="fa-solid fa-book"></i>
-          <h3>Class Notes</h3>
-          <p>Download PDFs, slides, and scripts from each session.</p>
-          <a href="#notes" class="card-link">Access Notes →</a>
-        </div>
-        <div class="online-card">
-          <i class="fa-solid fa-comments"></i>
-          <h3>Chat with Teachers</h3>
-          <p>Ask questions, submit assignments, get feedback.</p>
-          <button id="openChat" class="card-link">Open Class Chat →</button>
-        </div>
-        <div class="online-card">
-          <i class="fa-solid fa-video"></i>
-          <h3>Live Sessions</h3>
-          <p>Join weekly Zoom classes. Next: Saturday 2PM</p>
-          <a href="https://zoom.us/j/YOURMEETINGID" target="_blank" class="card-link">Join Live →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="notes" class="info-section">
-      <h2><i class="fa-solid fa-file-pdf"></i> Student Resources</h2>
-      <p class="center">Login required to download. Public samples below:</p>
-      <div class="download-grid">
-        <div class="download-card">
-          <i class="fa-solid fa-file-pdf"></i>
-          <h3>Script Writing Basics</h3>
-          <p>Module 1 Sample</p>
-          <a href="notes/sample-script-writing.pdf" download class="cta-btn">Download PDF</a>
-        </div>
-        <div class="download-card">
-          <i class="fa-solid fa-file-pdf"></i>
-          <h3>Camera Angles Guide</h3>
-          <p>Cinematography Cheat Sheet</p>
-          <a href="notes/camera-angles.pdf" download class="cta-btn">Download PDF</a>
-        </div>
-        <div class="download-card">
-          <i class="fa-solid fa-file-pdf"></i>
-          <h3>Editing Shortcuts</h3>
-          <p>Premiere Pro Hotkeys</p>
-          <a href="notes/editing-shortcuts.pdf" download class="cta-btn">Download PDF</a>
-        </div>
-      </div>
-      <p class="center small">Teachers: <a href="mailto:creathubug@gmail.com">Email us</a> to upload new notes for students</p>
-    </section>
-
-    <section id="films" class="info-section dark">
-      <h2><i class="fa-brands fa-youtube"></i> Watch Our Films</h2>
-      <div class="video-grid">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 1" frameborder="0" allowfullscreen></iframe>
-          <h3>The Gulu Story</h3>
-          <p>Documentary by Cohort 2024</p>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 2" frameborder="0" allowfullscreen></iframe>
-          <h3>Voices of Peace</h3>
-          <p>Short film shot on mobile</p>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Film 3" frameborder="0" allowfullscreen></iframe>
-          <h3>Behind the Scenes</h3>
-          <p>How we train filmmakers</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog" class="info-section">
-      <h2><i class="fa-solid fa-newspaper"></i> Hub Blog</h2>
-      <div class="blog-post">
-        <h3>May 2026 Intake Now Open</h3>
-        <p class="date">Posted: April 15, 2026 by Admin</p>
-        <p>Applications for our 10-month program are now open. Only 20 spots available. Scholarships for 5 women filmmakers. Apply before April 30th.</p>
-        <div class="post-actions">
-          <button class="like-btn"><i class="fa-solid fa-heart"></i> <span>24</span></button>
-          <button class="comment-btn"><i class="fa-solid fa-comment"></i> Comment</button>
-        </div>
-      </div>
-      <div class="blog-post">
-        <h3>New Online Course: Mobile Filmmaking</h3>
-        <p class="date">Posted: April 10, 2026 by Instructor John</p>
-        <p>Learn to shoot and edit professional videos using only your smartphone. 4-week online course starts May 5th. UGX 50,000=</p>
-        <div class="post-actions">
-          <button class="like-btn"><i class="fa-solid fa-heart"></i> <span>18</span></button>
-          <button class="comment-btn"><i class="fa-solid fa-comment"></i> Comment</button>
-        </div>
-      </div>
-      
-      <h3 class="comments-title">Comments</h3>
-      <div id="disqus_thread"></div>
-    </section>
-
-    <section id="gallery">
-      <h2>Creative Hub in Action</h2>
-      <div class="photo-grid">
-        <img src="student1.jpg" alt="Students filming in Gulu">
-        <img src="student2.jpg" alt="Editing class">
-        <img src="student3.jpg" alt="On location shoot">
-        <img src="student4.jpg" alt="Sound recording">
-        <img src="student5.jpg" alt="Lighting setup">
-        <img src="student6.jpg" alt="Graduation day">
-        <img src="student7.jpg" alt="Online class screenshot">
-        <img src="student8.jpg" alt="Team meeting">
-      </div>
-    </section>
-
-    <section id="membership" class="info-section dark">
-      <h2><i class="fa-solid fa-id-badge"></i> Become a Member</h2>
-      <p>Join the Creative Hub Collective. Members get equipment access, mentorship, and paid project referrals.</p>
-      <ul class="member-perks">
-        <li><i class="fa-solid fa-check"></i> Borrow cameras, mics, lights for personal projects</li>
-        <li><i class="fa-solid fa-check"></i> Monthly masterclasses with industry pros</li>
-        <li><i class="fa-solid fa-check"></i> Access to online class recordings</li>
-        <li><i class="fa-solid fa-check"></i> Listed in our crew database for paid hire</li>
-      </ul>
-      <div class="hero-btns">
-        <a href="https://wa.me/256772123456?text=Hi, I want to become a Creative Hub member" class="cta-btn">Apply on WhatsApp</a>
-        <a href="membership-form.pdf" class="cta-btn-outline" download><i class="fa-solid fa-download"></i> Membership Form</a>
-      </div>
-    </section>
-
-    <section id="partners" class="info-section">
-      <h2>Our Partners</h2>
-      <div class="partners-grid">
-        <img src="partner1.png" alt="Partner Logo 1">
-        <img src="partner2.png" alt="Partner Logo 2">
-        <img src="partner3.png" alt="Partner Logo 3">
-        <img src="partner4.png" alt="Partner Logo 4">
-        <img src="partner5.png" alt="Partner Logo 5">
-        <img src="partner6.png" alt="Partner Logo 6">
-      </div>
-    </section>
-
-    <section id="donate" class="info-section red">
-      <h2><i class="fa-solid fa-heart"></i> Support Creative Hub</h2>
-      <p>Your donation sponsors a student’s 10-month training. 100% goes to equipment, scholarships, and student films.</p>
-      <div class="donate-box">
-        <h3>Mobile Money</h3>
-        <p class="momo-number">MTN: 0773 841 953</p>
-            <p>Names: Agnes Akello</p>
-        <a href="tel:*165*1*0772123456#" class="cta-btn">Donate via MTN MoMo</a>
-        <p class="small">Click on mobile to auto-dial USSD. Or send manually and WhatsApp us the receipt.</p>
-      </div>
-    </section>
-
-    <section id="register" class="register-section">
-      <h2>Apply for 10-Month Program</h2>
-      <p class="center">Total Fee: UGX 200,000= | Next intake: May 2026</p>
-      <form id="registerForm" action="https://formspree.io/f/YOUR_ID" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="WhatsApp Number e.g. 0773841953" required>
-        <input type="number" name="age" placeholder="Age" min="16" max="40" required>
-        <select name="interest" required>
-          <option value="">Main Area of Interest</option>
-          <option value="Script Writing">Script Writing</option>
-          <option value="Film Directing">Film Directing</option>
-          <option value="Cinematography">Cinematography</option>
-          <option value="Film Editing">Film Editing</option>
-          <option value="Sound Recording & Mixing">Sound Recording & Mixing</option>
-        </select>
-        <textarea name="message" placeholder="Why do you want to join the film training?"></textarea>
-        <button type="submit">Submit Application</button>
-      </form>
-      <p id="formMessage"></p>
-      <p class="center small">Or <a href="application-form.pdf" download>download PDF form</a> and submit in person</p>
-    </section>
-
-    <section id="contact" class="info-section dark">
-      <h2>Contact Us</h2>
-      <div class="contact-grid">
-        <div>
-          <i class="fa-solid fa-location-dot"></i>
-          <p>Gulu City, Pece-Laroo<br>Opposite National Water</p>
-        </div>
-        <div>
-          <i class="fa-brands fa-whatsapp"></i>
-          <p><a href="https://wa.me/256772123456">0773 841 953</a></p>
-        </div>
-        <div>
-          <i class="fa-solid fa-envelope"></i>
-          <p><a href="mailto:creathubug@gmail.com">creathubug@gmail.com</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Creative Hub Gulu. Training Northern Uganda's filmmakers.</p>
-  </footer>
-
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal">
+  <!-- MODAL: SISI FILM LAB 2026 - 10 MONTHS -->
+  <div id="sisiModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Member Login</h2>
-      <p>Login to access member resources, equipment booking, and exclusive masterclasses.</p>
-      <button id="auth0Login" class="cta-btn">Login / Sign Up with Email</button>
-      <p class="small">Powered by Auth0. We never see your password.</p>
+      <h2>Register for Sisi Film Lab 2026</h2>
+      <p>Intensive 10-month film training program in Gulu. May 2026 intake. UGX 200,000 total. Only 15 spots!</p>
+      <form id="sisiForm">
+        <input type="text" id="sisiName" placeholder="Full Name" required>
+        <input type="email" id="sisiEmail" placeholder="Email" required>
+        <input type="tel" id="sisiPhone" placeholder="WhatsApp Number" required>
+        <select id="sisiLevel" required>
+          <option value="">Your Experience Level</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+        <button type="submit" class="btn">Submit Application</button>
+      </form>
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <script>
-    // Disqus Comments - Replace 'your-disqus-shortname' with yours
-    var disqus_config = function () {
-      this.page.url = window.location.href;
-      this.page.identifier = 'creativehubgulu-blog';
-    };
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
+  <!-- MODAL: ONLINE LESSON -->
+  <div id="lessonModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Join Online Lesson</h2>
+      <p><strong>This Saturday 2PM:</strong> Scriptwriting for Short Films</p>
+      <p>Taught by Akello Grace. Free for members.</p>
+      <a href="https://zoom.us/j/123456789" target="_blank" class="btn">
+        <i class="fa-solid fa-video"></i> Join Zoom Class
+      </a>
+      <p class="small">Meeting ID: 123 456 789 | Passcode: Gulu2026</p>
+    </div>
+  </div>
+
+  <!-- APPLY NOW QUESTIONNAIRE MODAL -->
+  <div id="applyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Apply for Sisi Film Lab 2026</h2>
+      <p>10-month film training. Fill this form. We'll contact you on WhatsApp.</p>
+      <form id="applyForm">
+        <input type="text" id="applicantName" placeholder="Full Name" required>
+        <input type="number" id="applicantAge" placeholder="Age" min="16" max="50" required>
+        <input type="tel" id="applicantPhone" placeholder="WhatsApp Number" required>
+        <select id="applicantExperience" required>
+          <option value="">Your Film Experience</option>
+          <option>Beginner - Never made a film</option>
+          <option>Some Experience - Made 1-2 short films</option>
+          <option>Intermediate - Made 3+ films</option>
+          <option>Advanced - Professional work</option>
+        </select>
+        <select id="applicantInterest" required>
+          <option value="">Main Area of Interest</option>
+          <option>Script Writing</option>
+          <option>Directing</option>
+          <option>Cinematography</option>
+          <option>Editing</option>
+          <option>Sound Design</option>
+          <option>Acting</option>
+        </select>
+        <textarea id="applicantWhy" placeholder="Why do you want to join Sisi Film Lab 2026?" rows="3" required></textarea>
+        <button type="submit" class="btn">
+          <i class="fa-brands fa-whatsapp"></i> Submit via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+   
+    <!-- PROGRAMS SECTION WITH CLEAN ACCORDION -->
+<section class="accordion-section" id="programs">
+  <div class="container">
+    <h2>10-Month Film Production Program</h2>
+    <p class="center">Click each stage to read full details. Learn by doing.</p>
+
+    <div class="accordion-tabs">
+
+      <!-- TAB 1: PRE-PRODUCTION (ACTIVE BY DEFAULT) -->
+      <div class="accordion-tab">
+        <button class="tab-header active">
+          <i class="fa-solid fa-pen-to-square"></i> 
+          <span>1. Pre-Production: From Idea to Script</span>
+          <i class="fa-solid fa-chevron-down arrow"></i>
+        </button>
+        <div class="tab-content active">
+          <div class="tab-inner">
+            <div class="tab-text">
+              <h3>Duration: 2 Months | Foundation Stage</h3>
+              <h4>What is Pre-Production?</h4>
+              <p>This is where your film is born on paper. No cameras yet. We plan everything so you don’t waste money on set. 80% of filmmaking problems are solved here.</p>
+
+              <h4>What You’ll Learn:</h4>
+              <ul>
+                <li><strong>Story Development:</strong> Turn Gulu experiences into film ideas. 3-Act Structure.</li>
+                <li><strong>Screenplay Formatting:</strong> Industry standard using free Celtx software.</li>
+                <li><strong>Storyboarding:</strong> Draw your film like a comic book. Plan every shot.</li>
+                <li><strong>Budgeting:</strong> How to make a 5M UGX film look like 50M.</li>
+              </ul>
+
+              <h4>Final Project:</h4>
+              <p>Complete 8-10 page short film script + pitch deck ready for investors.</p>
+              <a href="https://wa.me/256773841953?text=Tell%20me%20more%20about%20Pre-Production" class="btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Ask Questions on WhatsApp
+              </a>
+            </div>
+            <div class="tab-image">
+              <img src="images/pre-production.jpg" alt="Students brainstorming script ideas">
+              <p class="img-caption">Students brainstorming script ideas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: PRODUCTION (ACTIVE BY DEFAULT) -->
+      <div class="accordion-tab">
+        <button class="tab-header active">
+          <i class="fa-solid fa-video"></i> 
+          <span>2. Production: Lights, Camera, Action</span>
+          <i class="fa-solid fa-chevron-down arrow"></i>
+        </button>
+        <div class="tab-content active">
+          <div class="tab-inner">
+            <div class="tab-text">
+              <h3>Duration: 4 Months | Shooting Stage</h3>
+              <h4>What is Production?</h4>
+              <p>This is the shoot. You + crew + actors + camera = movie. We train you on real gear at Gulu Creative Hub. You’ll be holding cameras from Week 1.</p>
+
+              <h4>What You’ll Learn:</h4>
+              <ul>
+                <li><strong>Directing:</strong> Working with actors, visual storytelling, running a set.</li>
+                <li><strong>Cinematography:</strong> Camera operation, lenses, composition, gimbal movement.</li>
+                <li><strong>Lighting & Sound:</strong> 3-Point lighting with LEDs, natural light hacks, boom mic recording.</li>
+                <li><strong>Live Shoot:</strong> Direct your 5-minute short film in Gulu with classmates as crew.</li>
+              </ul>
+
+              <h4>Gear You’ll Use:</h4>
+              <p>Canon M50, Sony a6400, Godox LED lights, Rode mics, DJI gimbal - all provided.</p>
+              <a href="https://wa.me/256773841953?text=Tell%20me%20more%20about%20Production" class="btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Ask Questions on WhatsApp
+              </a>
+            </div>
+            <div class="tab-image">
+              <img src="images/production.jpg" alt="Students filming on location in Gulu">
+              <p class="img-caption">Students filming on location in Gulu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: POST-PRODUCTION -->
+      <div class="accordion-tab">
+        <button class="tab-header">
+          <i class="fa-solid fa-film"></i> 
+          <span>3. Post-Production: The Edit</span>
+          <i class="fa-solid fa-chevron-down arrow"></i>
+        </button>
+        <div class="tab-content">
+          <div class="tab-inner">
+            <div class="tab-text">
+              <h3>Duration: 4 Months | Editing Stage</h3>
+              <h4>What is Post-Production?</h4>
+              <p>This is where bad footage becomes a good film, and good footage becomes great. 50% of film is sound.</p>
+
+              <h4>What You’ll Learn:</h4>
+              <ul>
+                <li><strong>Adobe Premiere Pro:</strong> Cutting on action, J-cuts, L-cuts, pacing.</li>
+                <li><strong>Color Grading:</strong> Fix bad lighting + create mood in DaVinci Resolve.</li>
+                <li><strong>Sound Design:</strong> Adding room tone, footsteps, music. Export for YouTube/Cinema.</li>
+                <li><strong>VFX Basics:</strong> Remove objects, green screen, text animations.</li>
+              </ul>
+
+              <h4>Final Project:</h4>
+              <p>Completed 5-minute short film with color, sound, music, credits. Festival-ready.</p>
+              <a href="https://wa.me/256773841953?text=Tell%20me%20more%20about%20Post-Production" class="btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Ask Questions on WhatsApp
+              </a>
+            </div>
+            <div class="tab-image">
+              <img src="images/post-production.jpg" alt="Student editing in Premiere Pro">
+              <p class="img-caption">Student editing in Premiere Pro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: DISTRIBUTION -->
+      <div class="accordion-tab">
+        <button class="tab-header">
+          <i class="fa-solid fa-bullhorn"></i> 
+          <span>4. Distribution: Make Money From Your Film</span>
+          <i class="fa-solid fa-chevron-down arrow"></i>
+        </button>
+        <div class="tab-content">
+          <div class="tab-inner">
+            <div class="tab-text">
+              <h3>Duration: 1 Month | Release Stage</h3>
+              <h4>What is Distribution?</h4>
+              <p>A film no one sees is a dead film. We teach you how to get your work on phones, TVs, and festivals — and get paid.</p>
+
+              <h4>What You’ll Learn:</h4>
+              <ul>
+                <li><strong>Film Festivals:</strong> Submit to Uganda Film Festival, Zanzibar Film Fest, Africa Magic.</li>
+                <li><strong>YouTube Strategy:</strong> Thumbnails, titles, SEO so Gulu audiences find your film.</li>
+                <li><strong>Monetization:</strong> YouTube ads, client work, wedding/music video gigs.</li>
+                <li><strong>Portfolio Building:</strong> Create your own website + showreel to attract paid jobs.</li>
+              </ul>
+
+              <h4>Final Project:</h4>
+              <p>Your film uploaded with 1000+ views + strategy to land your first paid gig.</p>
+              <a href="https://wa.me/256773841953?text=Tell%20me%20more%20about%20Distribution" class="btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Ask Questions on WhatsApp
+              </a>
+            </div>
+            <div class="tab-image">
+              <img src="images/distribution.jpg" alt="Film screening at Gulu Creative Hub">
+              <p class="img-caption">Film screening at Gulu Creative Hub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL SECTION WITH ACCORDION -->
+<section class="accordion-section" id="portal">
+  <h2>Student Portal</h2>
+  <p>Access resources, submit assignments, and track progress</p>
+  <div class="accordion-tabs">
+    <!-- TAB 1: LOGIN -->
+    <div class="accordion-tab">
+      <button class="tab-header">
+        <i class="fa-solid fa-right-to-bracket"></i> 
+        <span>Login to Portal</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="tab-content">
+        <h3>Access Your Gulu Creative Hub Account</h3>
+        <p>Use your email + password to login:</p>
+        <form>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <button class="btn">Login</button>
+        </form>
+        <p>Forgot password? <a href="#">Reset here</a></p>
+      </div>
+    </div>
+    <!-- TAB 2: RESOURCES -->
+    <div class="accordion-tab">
+      <button class="tab-header">
+        <i class="fa-solid fa-folder"></i> 
+        <span>Download Resources</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="tab-content">
+        <h3>Course Materials</h3>
+        <ul>
+          <li><a href="#">Script Templates (.docx)</a></li>
+          <li><a href="#">Shot List Template (.xlsx)</a></li>
+          <li><a href="#">Premiere Pro Tutorials (.pdf)</a></li>
+          <li><a href="#">Color Grading LUTs (.cube)</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- TAB 3: LIVE SESSIONS -->
+    <div class="accordion-tab">
+      <button class="tab-header">
+        <i class="fa-solid fa-video"></i> 
+        <span>Live Sessions</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="tab-content">
+        <h3>Join Zoom Classes</h3>
+        <p><strong>Next Session:</strong> Scriptwriting Workshop - Saturday, 2PM</p>
+        <a href="https://zoom.us/j/123456789" target="_blank" class="btn">
+          <i class="fa-solid fa-video"></i> Join Zoom
+        </a>
+        <p class="small">Meeting ID: 123 456 789 | Passcode: Gulu2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="info-section dark">
+  <div class="container">
+    <h2>About Creative Hub Gulu</h2>
+    <p class="center">We train Northern Uganda's next generation of storytellers. Based in Gulu City, we've graduated 200+ filmmakers since 2020.</p>
+  </div>
+</section>
+
+<!-- MEMBERSHIP SECTION -->
+<section id="membership" class="info-section dark">
+  <div class="container">
+    <h2><i class="fa-solid fa-id-badge"></i> Gulu Creative Hub Membership</h2>
+    <p class="center">UGX 50,000/year. Get equipment access, paid gigs, and masterclasses.</p>
+    <div class="center" style="margin-top:2rem">
+      <button class="btn" onclick="window.open('https://wa.me/256773841953?textI%20want%20to%20join%20Gulu%20Creative%20Hub%20Membership')">Join via WhatsApp</button>
+    </div>
+</section>
+
+<!-- BLOG & NEWS -->
+<section id="blog" class="info-section dark">
+  <div class="container">
+    <h2><i class="fa-solid fa-newspaper"></i> Blog & News</h2>
+    <p class="center">Latest updates from Gulu Creative Hub</p>
+    <div id="blog-container" class="blog-grid"></div>
+  </div>
+</section>
+
+<!-- PARTNERS SECTION -->
+<section id="partners" class="info-section">
+  <div class="container">
+    <h2 class="center">Our Partners</h2>
+    <p class="center">We work with organizations that believe in Ugandan storytelling.</p>
+    
+    <div class="partners-grid">
+      <div class="partner-logo">
+        <img src="images/partner1.png" alt="Stichting DOEN">
+      </div>
+      <div class="partner-logo">
+        <img src="images/partner2.png" alt="In Place of War">
+      </div>
+      <div class="partner-logo">
+        <img src="images/partner3.png" alt="Partner 3">
+      </div>
+      <div class="partner-logo">
+        <img src="images/partner4.png" alt="Partner 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE SECTION -->
+<section id="donate" class="info-section dark">
+  <div class="container">
+    <h2><i class="fa-solid fa-hand-holding-heart"></i> Support Gulu Creative Hub</h2>
+    <p class="center">Your donation trains the next Ugandan filmmaker. UGX 50,000 sponsors one student's materials.</p>
+    <div class="donate-grid">
+      <div class="donate-card">
+        <h3>MTN Mobile Money</h3>
+        <p class="donate-number">0773 841 953</p>
+        <p>Names: Gulu Creative Hub</p>
+      </div>
+      <div class="donate-card">
+        <h3>WhatsApp Donation</h3>
+        <a href="https://wa.me/256773841953?text=I%20want%20to%20donate%20to%20Gulu%20Creative%20Hub" target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Message Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <p>© 2026 Creative Hub Gulu. Training Northern Uganda's filmmakers.</p>
+  </div>
+</footer>
+
+<!-- JSONP SCRIPT FOR BLOGGER POSTS -->
+<script>
+  function loadGuluHubPosts(data) {
+    const container = document.getElementById('blog-container');
+    if (!data.feed.entry) {
+      container.innerHTML = '<p>No posts yet. Check back soon.</p>';
+      return;
+    }
+    container.innerHTML = '';
+    data.feed.entry.forEach(post => {
+      const title = post.title.$t;
+      const link = post.link.find(l => l.rel === 'alternate').href;
+      const published = new Date(post.published.$t).toLocaleDateString('en-UG', { year: 'numeric', month: 'long', day: 'numeric' });
+      let imgSrc = 'images/blog-fallback.jpg';
+      const content = post.content?.$t || '';
+      const imgTag = content.match(/<img[^>]+src="([^">]+)"/i);
+      if (imgTag && imgTag[1]) imgSrc = imgTag[1].replace(/\/s\d+-c\//, '/s800/');
+      const snippet = content.replace(/<[^>]+>/g, '').substring(0, 150) + '...';
+      container.innerHTML += `
+        <article class="blog-card">
+          <img src="${imgSrc}" alt="${title}" class="blog-thumb" loading="lazy">
+          <div class="blog-content">
+            <h3><a href="${link}" target="_blank">${title}</a></h3>
+            <p class="blog-date">${published}</p>
+            <p>${snippet}</p>
+            <a href="${link}" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </article>
+      `;
+    });
+  }
+</script>
+<script src="https://gulucreativehub.blogspot.com/feeds/posts/default?alt=json-in-script&callback=loadGuluHubPosts&max-results=3"></script>
+<script src="script.js"></script>
+
+<!-- ACCORDION JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabHeaders = document.querySelectorAll('.tab-header');
+  
+  tabHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const isActive = this.classList.contains('active');
+      
+      // Close all other tabs
+      tabHeaders.forEach(h => {
+        h.classList.remove('active');
+        h.nextElementSibling.classList.remove('active');
+      });
+      
+      // Toggle current tab
+      if (!isActive) {
+        this.classList.add('active');
+        content.classList.add('active');
+      }
+    });
+  });
+});
+</script>
+
+<!-- MODAL JAVASCRIPT - TO MAKE BUTTONS WORK -->
+<script>
+// Get modals
+const sisiModal = document.getElementById('sisiModal');
+const lessonModal = document.getElementById('lessonModal');
+const applyModal = document.getElementById('applyModal');
+
+// Get buttons
+const sisiBtn = document.getElementById('sisiBtn');
+const lessonBtn = document.getElementById('lessonBtn');
+const applyBtn = document.getElementById('applyBtn');
+
+// Get close buttons
+const closes = document.querySelectorAll('.close');
+
+// Open modals
+sisiBtn.onclick = () => sisiModal.style.display = 'block';
+lessonBtn.onclick = () => lessonModal.style.display = 'block';
+applyBtn.onclick = () => applyModal.style.display = 'block';
+
+// Close modals
+closes.forEach(close => {
+  close.onclick = function() {
+    sisiModal.style.display = 'none';
+    lessonModal.style.display = 'none';
+    applyModal.style.display = 'none';
+  }
+});
+
+// Close when clicking outside
+window.onclick = function(event) {
+  if (event.target == sisiModal) sisiModal.style.display = 'none';
+  if (event.target == lessonModal) lessonModal.style.display = 'none';
+  if (event.target == applyModal) applyModal.style.display = 'none';
+}
+
+// WhatsApp form submit
+document.getElementById('applyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('applicantName').value;
+  const age = document.getElementById('applicantAge').value;
+  const phone = document.getElementById('applicantPhone').value;
+  const exp = document.getElementById('applicantExperience').value;
+  const interest = document.getElementById('applicantInterest').value;
+  const why = document.getElementById('applicantWhy').value;
+  
+  const message = `*Sisi Film Lab 2026 Application*%0A%0A*Name:* ${name}%0A*Age:* ${age}%0A*WhatsApp:* ${phone}%0A*Experience:* ${exp}%0A*Interest:* ${interest}%0A*Why:* ${why}`;
+  
+  window.open(`https://wa.me/256773841953?text=${message}`, '_blank');
+  applyModal.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
 </body>
 </html>

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ogenrwot Emmy",
+    "class": "Class of 2025",
+    "story": "Gulu Creative Hub trained me in professional video editing. The skills I learned got me hired straight after graduation.",
+    "role": "Now: Music Video Editor, Nexus Studio",
+    "image": "student-emmy.jpg"
+  },
+  {
+    "name": "Okure Nelson",
+    "class": "Class of 2025", 
+    "story": "From student to full-time editor in months. The hands-on training prepared me for real client work.",
+    "role": "Now: Full-time Editor working on several projects in Soroti",
+    "image": "student-nelson.jpg"
+  },
+  {
+    "name": "Isaac Mutabazi",
+    "class": "Class of 2025",
+    "story": "I learned storytelling and documentary skills here. Now I document community impact every day.",
+    "role": "Now: Working with Wokober documenting their programs",
+    "image": "student-isaac.jpg"
+  }
+]

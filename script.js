@@ -1,200 +1,112 @@
-/**
- * Creative Hub Gulu - Main Script v3.0
- * Features: Courses, Login Modal, Form Validation, Filters
- */
-
-const CONFIG = {
-  whatsappNumber: '256772123456', // CHANGE THIS
-  formspreeId: 'YOUR_ID', // CHANGE THIS - from formspree.io
-  programFee: 'UGX 200,000=',
-  programDuration: '10 Months',
-  youtubeChannel: 'https://youtube.com/@yourchannel', // CHANGE THIS
-  disqusShortname: 'your-disqus-shortname' // CHANGE THIS after Disqus signup
-};
-
-const COURSES = [
-  { id: 1, title: "Script Writing", type: "Pre-Production", desc: "Story structure, character development, dialogue, and formatting for short films & documentaries.", duration: "Month 1-2" },
-  { id: 2, title: "Film Directing", type: "Pre-Production", desc: "Visual storytelling, working with actors, shot lists, and managing a set.", duration: "Month 3-4" },
-  { id: 3, title: "Cinematography", type: "Production", desc: "Camera operation, lighting techniques, composition, and movement for emotion.", duration: "Month 5-6" },
-  { id: 4, title: "Sound Recording & Mixing", type: "Production", desc: "Location sound, boom operation, wild tracks, and mixing in post-production.", duration: "Month 7-8" },
-  { id: 5, title: "Film Editing", type: "Post-Production", desc: "Premiere Pro & DaVinci Resolve. Cutting for story, pace, color, and final delivery.", duration: "Month 9-10" }
-];
-
-const DOM = {
-  coursesGrid: document.getElementById('coursesGrid'),
-  filterButtons: document.querySelectorAll('.filter-btn'),
-  registerForm: document.getElementById('registerForm'),
-  formMessage: document.getElementById('formMessage'),
-  loginBtn: document.getElementById('loginBtn'),
-  loginModal: document.getElementById('loginModal'),
-  closeModal: document.querySelector('.close'),
-  auth0Login: document.getElementById('auth0Login')
-};
-
-// ===================================
-// COURSE DISPLAY FUNCTIONS
-// ===================================
-
-function createCourseCard(course) {
-  return `
-    <div class="card" data-type="${course.type}" data-id="${course.id}">
-      <h3>${course.title}</h3>
-      <span class="tag">${course.type}</span>
-      <p>${course.desc}</p>
-      <p class="duration"><strong>Timeline:</strong> ${course.duration}</p>
-    </div>
-  `;
-}
-
-function displayCourses(coursesList) {
-  if (!DOM.coursesGrid) return;
+// GULU CREATIVE HUB - WORKING SCRIPT
+document.addEventListener('DOMContentLoaded', function() {
   
-  if (coursesList.length === 0) {
-    DOM.coursesGrid.innerHTML = '<p class="center">No courses found.</p>';
-    return;
-  }
+  // GET BUTTONS + MODALS
+  const sisiBtn = document.getElementById('sisiBtn');
+  const sisiModal = document.getElementById('sisiModal');
+  const applyBtn = document.getElementById('applyBtn');
+  const applyModal = document.getElementById('applyModal');
+  const lessonBtn = document.getElementById('lessonBtn');
+  const lessonModal = document.getElementById('lessonModal');
+  const joinLiveBtn = document.getElementById('joinLiveBtn');
+  const closeButtons = document.querySelectorAll('.close');
   
-  const coursesHTML = coursesList.map(course => createCourseCard(course)).join('');
-  DOM.coursesGrid.innerHTML = coursesHTML;
-}
-
-function filterCourses(filterType) {
-  const filtered = filterType === 'all' ? COURSES : COURSES.filter(c => c.type === filterType);
-  displayCourses(filtered);
-}
-
-// ===================================
-// FORM VALIDATION FUNCTIONS
-// ===================================
-
-function isValidUGPhone(phone) {
-  return /^07\d{8}$/.test(phone);
-}
-
-function showFormMessage(message, type = 'error') {
-  if (!DOM.formMessage) return;
-  DOM.formMessage.textContent = message;
-  DOM.formMessage.style.color = type === 'error' ? '#f87171' : '#4ade80';
-}
-
-function clearFormMessage() {
-  if (DOM.formMessage) {
-    DOM.formMessage.textContent = '';
-  }
-}
-
-function validateForm() {
-  clearFormMessage();
-  const name = document.querySelector('input[name="name"]').value.trim();
-  const phone = document.querySelector('input[name="phone"]').value.trim();
+  // OPEN MODALS
+  if(sisiBtn) sisiBtn.onclick = () => sisiModal.style.display = 'block';
+  if(applyBtn) applyBtn.onclick = () => applyModal.style.display = 'block';
+  if(lessonBtn) lessonBtn.onclick = () => lessonModal.style.display = 'block';
+  if(joinLiveBtn) joinLiveBtn.onclick = () => lessonModal.style.display = 'block';
   
-  if (!name || name.length < 3) {
-    showFormMessage('Please enter your full name (min 3 characters)', 'error');
-    return false;
-  }
-  if (!phone || !isValidUGPhone(phone)) {
-    showFormMessage('Use UG format: 0772123456', 'error');
-    return false;
-  }
-  return true;
-}
-
-// ===================================
-// LOGIN MODAL FUNCTIONS
-// ===================================
-
-function openLoginModal() {
-  if (DOM.loginModal) {
-    DOM.loginModal.style.display = 'block';
-  }
-}
-
-function closeLoginModal() {
-  if (DOM.loginModal) {
-    DOM.loginModal.style.display = 'none';
-  }
-}
-
-// ===================================
-// EVENT HANDLERS
-// ===================================
-
-function handleFilterClick(e) {
-  const button = e.target.closest('.filter-btn');
-  if (!button) return;
-  
-  DOM.filterButtons.forEach(btn => btn.classList.remove('active'));
-  button.classList.add('active');
-  filterCourses(button.dataset.filter);
-}
-
-function handleFormSubmit(e) {
-  if (!validateForm()) {
-    e.preventDefault();
-    return;
-  }
-  showFormMessage('Sending application...', 'success');
-}
-
-// AUTH0 LOGIN - You need to sign up first
-function handleAuth0Login() {
-  alert('NEXT STEPS FOR REAL LOGIN:\n\n1. Go to auth0.com → Sign up FREE\n2. Create Application → Single Page App\n3. Get your Domain & Client ID\n4. Send them to me\n5. I give you 3 lines of code to make login work\n\nAuth0 free tier = 7,000 users. No credit card needed.');
-}
-
-// Close modal when clicking outside it
-function handleWindowClick(e) {
-  if (e.target === DOM.loginModal) {
-    closeLoginModal();
-  }
-}
-
-// ===================================
-// INITIALIZATION
-// ===================================
-
-function initEventListeners() {
-  // Filter buttons
-  DOM.filterButtons.forEach(btn => {
-    btn.addEventListener('click', handleFilterClick);
+  // CLOSE MODALS
+  closeButtons.forEach(btn => {
+    btn.onclick = function() {
+      sisiModal.style.display = 'none';
+      applyModal.style.display = 'none';
+      lessonModal.style.display = 'none';
+    }
   });
   
-  // Registration form
-  if (DOM.registerForm) {
-    DOM.registerForm.addEventListener('submit', handleFormSubmit);
+  // CLICK OUTSIDE TO CLOSE
+  window.onclick = function(event) {
+    if (event.target == sisiModal) sisiModal.style.display = 'none';
+    if (event.target == applyModal) applyModal.style.display = 'none';
+    if (event.target == lessonModal) lessonModal.style.display = 'none';
   }
   
-  // Login modal
-  if (DOM.loginBtn) {
-    DOM.loginBtn.addEventListener('click', openLoginModal);
+  // APPLY NOW FORM -> WHATSAPP
+  const applyForm = document.getElementById('applyForm');
+  if(applyForm) {
+    applyForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('applicantName').value;
+      const age = document.getElementById('applicantAge').value;
+      const phone = document.getElementById('applicantPhone').value;
+      const experience = document.getElementById('applicantExperience').value;
+      const interest = document.getElementById('applicantInterest').value;
+      const why = document.getElementById('applicantWhy').value;
+      
+      const message = `*Sisi Film Lab 2026 Application*%0A%0A*Name:* ${name}%0A*Age:* ${age}%0A*WhatsApp:* ${phone}%0A*Experience:* ${experience}%0A*Interest:* ${interest}%0A*Why Join:* ${why}`;
+      
+      window.open(`https://wa.me/256773841953?text=${message}`, '_blank');
+      applyModal.style.display = 'none';
+      applyForm.reset();
+    });
   }
   
-  if (DOM.closeModal) {
-    DOM.closeModal.addEventListener('click', closeLoginModal);
+  // SISI FILM LAB FORM -> WHATSAPP
+  const sisiForm = document.getElementById('sisiForm');
+  if(sisiForm) {
+    sisiForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('sisiName').value;
+      const email = document.getElementById('sisiEmail').value;
+      const phone = document.getElementById('sisiPhone').value;
+      const level = document.getElementById('sisiLevel').value;
+      
+      const message = `*Sisi Film Lab 2026 Registration*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*WhatsApp:* ${phone}%0A*Level:* ${level}`;
+      
+      window.open(`https://wa.me/256773841953?text=${message}`, '_blank');
+      sisiModal.style.display = 'none';
+      sisiForm.reset();
+    });
   }
-  
-  if (DOM.auth0Login) {
-    DOM.auth0Login.addEventListener('click', handleAuth0Login);
-  }
-  
-  // Close modal on outside click
-  window.addEventListener('click', handleWindowClick);
-}
+});
 
-function init() {
-  // Display all courses on page load
-  displayCourses(COURSES);
+// MODULE FILTER FOR 10-MONTH PROGRAM
+document.addEventListener('DOMContentLoaded', function() {
   
-  // Set up all event listeners
-  initEventListeners();
+  // ... keep all your existing modal code above this ...
   
-  // Log for debugging
-  console.log('Creative Hub Gulu v3.0 Loaded');
-  console.log('Program:', CONFIG.programDuration, CONFIG.programFee);
-}
-
-// Run when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
-}
+  // COURSE MODULE FILTER BUTTONS
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const moduleCards = document.querySelectorAll('.module-card');
+  
+  if(filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        
+        // 1. Remove 'active' from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // 2. Add 'active' to clicked button
+        this.classList.add('active');
+        
+        // 3. Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // 4. Show/hide modules
+        moduleCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            if (card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  }
+});
